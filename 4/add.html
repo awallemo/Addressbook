@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">        
+</head>
+
+<body>
+    <header id = "mainheader" class="header">
+    <form>
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="search" placeholder="Name">
+        
+    </form>
+    </header>
+    
+    <div class="container">
+    <div class ="entrycontainer">
+    <div id="main">
+        <h1 class="title">Add Entry</h1>
+    <form id="addForm" name="myForm" >
+        <label for = "name">Name: <input type="text" id="name" class="formFields" name="fname"></label>
+        <label for ="phone">Phone: <input type= "text" pattern="[0-9() +-]{5,}" id="phone" class="formFields" name="phone"></label>
+        <label for = "email">Email: <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" id="email" class="formFields" name="email"></label>
+        <input type="submit" value="Submit" class="submitbutton"/>  
+    </form>
+    </div>
+    </div>
+    <br>
+    <div class="entriescontainer">
+        <h1 class="title">Entries:</h1>
+
+        <div class = "optionscontainer">
+        <button id="color" class="fontbutton" onclick="dropFunc()">Font</button>
+        <div id="mydiv">
+        <select id="dropdown" class="dropdown">
+            <option value="sans serif" >sans-serif(default)</option>
+            <option value = "verdana" >Verdana</option>
+            <option value="cursive">Cursive</option>
+            <option value="timesnewroman">Times New Roman</option>
+        </select>
+        </div>
+        </div>
+
+        <ul id ="items" class="list-group">
+
+            <li class="list-group-item" id="list-item">
+                <p class="name"> Ola Nordmann</p>
+                <p class="phone">+4790909012</p>
+                <a href="mailto:ola@nordmann.no" class="email"> ola@nordmann.no</a>
+                <button class='delete-button'>X</button>
+            </li>
+
+        </ul>
+    </div>
+    </div>
+   
+    <script src="addressbook.js"></script>
+</body>
+</html>
